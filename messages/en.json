@@ -1,0 +1,22 @@
+{
+    "common": {
+        "title": "Makaan",
+        "get-started": "Get Started"
+    },
+    "home": {
+        "title": "Makaan | Home page",
+        "description": "Welcome to Makaan, where your dream home awaits. Discover a diverse range of real estate options tailored to your lifestyle, from chic urban apartments to serene suburban villas. Our user-friendly platform ensures a seamless experience as you explore, compare, and connect with sellers. Backed by expert guidance, innovative technology, and a commitment to trust and transparency, Makaan is your premier destination for a stress-free journey towards home ownership. Start your search today and find the perfect property that resonates with your vision of home.",
+        "hero-title": "Find A Perfect Home To Live With Your Family",
+        "hero-description": "Discover your dream home with Makaan – the ultimate destination for seamless property exploration. From cozy apartments to spacious villas, find the perfect fit for your lifestyle. Start your journey today. Your dream home is just a click away!"
+    },
+    "nav": {
+        "home": "Home",
+        "contact": "Contact",
+        "about": "About",
+        "properties": "Properties",
+        "add-property": "Add Property"
+    },
+    "not-found": {
+        "title": "This is not the page doesn't exist"
+    }
+}

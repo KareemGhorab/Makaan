@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply rounded text-white transition-colors duration-100;
+}
+
+.btn--primary {
+    @apply bg-primary-1 hover:bg-primary-2;
+}
+
+.btn--secondary {
+    @apply bg-secondary-1 hover:bg-secondary-2;
+}

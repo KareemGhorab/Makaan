@@ -1,0 +1,4 @@
+.form input,
+.form select {
+    @apply w-80 rounded px-4 py-3 focus:outline-none;
+}

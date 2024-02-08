@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PropertyType {
+  id       Int        @id @default(autoincrement())
+  name     String
+  Property Property[]
+}
+
+enum PropertyPurpose {
+  SALE
+  RENT
+}
+
+enum PropertyFurnishing {
+  FURNISHED
+  UNFURNISHED
+}
+
+model Location {
+  id       Int        @id @default(autoincrement())
+  name     String
+  Property Property[]
+}
+
+model Amenity {
+  id       Int        @id @default(autoincrement())
+  Property Property[]
+}
+
+model Property {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String?
+  price       Int
+
+  type           PropertyType @relation(fields: [propertyTypeId], references: [id])
+  propertyTypeId Int
+
+  size      Int
+  bedrooms  Int
+  bathrooms Int
+
+  location   Location @relation(fields: [locationId], references: [id])
+  locationId Int
+
+  Purpose    PropertyPurpose
+  furnishing PropertyFurnishing
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  deliveryIn DateTime?
+
+  amenities Amenity @relation(fields: [amenityId], references: [id])
+  amenityId Int
+}
