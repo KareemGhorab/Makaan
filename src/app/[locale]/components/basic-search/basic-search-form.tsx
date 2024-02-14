@@ -13,13 +13,13 @@ type TProps = {
 }
 
 const BasicSearchForm: FC<TProps> = ({ locations, propertyTypes }) => {
-	const router = useRouter()
+    const router = useRouter()
     const queryRef = useRef<HTMLInputElement | null>(null)
     const propertyTypeRef = useRef<HTMLSelectElement | null>(null)
     const locationRef = useRef<HTMLSelectElement | null>(null)
 
     const handleSearch: FormEventHandler = (e: FormEvent) => {
-		e.preventDefault()
+        e.preventDefault()
         const searchQuery = new URLSearchParams({
             ...(queryRef.current?.value && { query: queryRef.current.value }),
             ...(propertyTypeRef.current?.value && {
@@ -30,7 +30,7 @@ const BasicSearchForm: FC<TProps> = ({ locations, propertyTypes }) => {
             }),
         })
 
-		router.push(`/properties?${searchQuery}`)
+        router.push(`/properties?${searchQuery}`)
     }
 
     return (
@@ -46,7 +46,7 @@ const BasicSearchForm: FC<TProps> = ({ locations, propertyTypes }) => {
                 <option value="" disabled>
                     Property Type
                 </option>
-                {locations.map(({ id, name }) => (
+                {propertyTypes.map(({ id, name }) => (
                     <option key={id} value={name}>
                         {`${name[0]}${name.slice(1).toLowerCase()}`}
                     </option>
@@ -56,7 +56,7 @@ const BasicSearchForm: FC<TProps> = ({ locations, propertyTypes }) => {
                 <option value="" disabled>
                     Location
                 </option>
-                {propertyTypes.map(({ id, name }) => (
+                {locations.map(({ id, name }) => (
                     <option key={id} value={name}>
                         {`${name[0]}${name.slice(1).toLowerCase()}`}
                     </option>
