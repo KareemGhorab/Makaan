@@ -16,6 +16,9 @@
         "properties": "العقارات",
         "add-property": "اضف عقارًا"
     },
+    "property": {
+        "property-types": "أنواع العقارات"
+    },
     "not-found": {
         "title": "هذه الصفحة غير موجودة"
     }

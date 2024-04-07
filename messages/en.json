@@ -16,6 +16,9 @@
         "properties": "Properties",
         "add-property": "Add Property"
     },
+    "property": {
+        "property-types": "Property Types"
+    },
     "not-found": {
         "title": "This is not the page doesn't exist"
     }

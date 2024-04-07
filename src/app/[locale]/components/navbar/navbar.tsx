@@ -41,7 +41,7 @@ const Navbar: FC<TProps> = ({ navLinks, title, buttonLabel, locale }) => {
                     className="flex items-center gap-2 text-4xl font-bold text-primary-1"
                 >
                     <Image
-                        src="/icon-deal.png"
+                        src="/icons/icon-deal.png"
                         alt="Makaan Logo"
                         height={45}
                         width={45}
